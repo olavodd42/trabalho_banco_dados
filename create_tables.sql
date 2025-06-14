@@ -20,11 +20,11 @@ CREATE TABLE IF NOT EXISTS Mandato (
   id_mandato      INT PRIMARY KEY,
   id_presidente   INT NOT NULL,
   id_partido      INT,
+  id_vice         INT,
   data_inicio     DATE NOT NULL,
   data_fim        DATE,
   duracao_dias    INT,
-  tipo_eleicao    VARCHAR(50),
-  id_vice         INT,
+  eleicao    VARCHAR(50),
   FOREIGN KEY (id_presidente) REFERENCES Presidente(id_presidente),
   FOREIGN KEY (id_partido)    REFERENCES Partido(id_partido),
   FOREIGN KEY (id_vice)       REFERENCES Vice(id_vice)
